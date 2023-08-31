@@ -1,0 +1,30 @@
+// TerminalGame.scss
+
+// Import the base jQuery Terminal styles
+@import '~jquery.terminal/css/jquery.terminal.min.css';
+
+// Your custom styles for the terminal game
+.terminal-container {
+  // Set container styles
+  padding: 20px;
+  background-color: #1d1d1d;
+}
+
+.terminal-output {
+  // Style terminal output text
+  font-family: 'Courier New', monospace;
+  font-size: 16px; 
+  color: #f70f0f;
+//   background-color: #67dd57;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.terminal-input {
+  // Style terminal input prompt
+  font-family: 'Courier New', monospace;
+  font-size: 24px; 
+  color: rgb(52, 167, 190);
+}
+
+// Add more custom styling classes as needed
