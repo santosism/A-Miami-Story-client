@@ -6,14 +6,17 @@ import axios from 'axios';
 import './TerminalGame.scss';
 
 
-function TerminalGame() {
+function TerminalGame({users}) {
+
+  //q: how do I get firebase config to show up here?
 
 
   //have branches that still come together
 
+
   const terminalRef = useRef(null);
 
-
+  console.log(users);
   useEffect(() => {
 
     const terminal = $(terminalRef.current); // Use jQuery from the import
@@ -74,7 +77,7 @@ function TerminalGame() {
       stillWalking: {
         look: "timePasses",
       },
-      timePasses:{
+      timePasses: {
         move: "demoDay1",
       },
       uber: {
@@ -261,17 +264,17 @@ function TerminalGame() {
         ],
       },
       waitForBridge: {
-        description: 
-        "\n The bridge is still up. ",
+        description:
+          "\n The bridge is still up. ",
         choices: [
-          { text: "wait", nextScene: "freeBridge"}
+          { text: "wait", nextScene: "freeBridge" }
         ],
       },
       freeBridge: {
         description:
-        "\nThe bridge is down, and you are free to go...or in this case, your uber Driver can hightail it there. Hold on!",
+          "\nThe bridge is down, and you are free to go...or in this case, your uber Driver can hightail it there. Hold on!",
         choices: [
-          { text: "continue", nextScene: 'demoDay2'}
+          { text: "continue", nextScene: 'demoDay2' }
         ],
       },
       metrorail: {
@@ -289,39 +292,39 @@ function TerminalGame() {
         ],
       },
 
-      metroRide:{
+      metroRide: {
         description:
-        "\n High up in the sky, about 40 feet, the Metro car is running fast. People stare out the windows. You do, too. \n The downtown horizon shifts away, the skyscrapers, finished and unfinished, blurry in the distance.", 
+          "\n High up in the sky, about 40 feet, the Metro car is running fast. People stare out the windows. You do, too. \n The downtown horizon shifts away, the skyscrapers, finished and unfinished, blurry in the distance.",
         choices: [
-        { text: "enter", nextScene: "stuck" }
+          { text: "enter", nextScene: "stuck" }
         ],
       },
       stuck: {
-        description: 
-        "And then, just as quickly as you're moving, the train slowly stops moving. \nThe wheels stop running.\nThe car is stuck on the middle of the track. No way to leave, and you feel the wind moving about the outisde.",
+        description:
+          "And then, just as quickly as you're moving, the train slowly stops moving. \nThe wheels stop running.\nThe car is stuck on the middle of the track. No way to leave, and you feel the wind moving about the outisde.",
         choices: [
-          { text: "exit", nextScene: "metroWaiting"}
+          { text: "exit", nextScene: "metroWaiting" }
         ],
       },
       metroWaiting: {
         description:
-        "It's been thirty minutes. \nThe metrocar is still stuck. There's been one announcement, saying that things will be cleared up and moving soon. \nYou hope. It is 1:30 pm.",
+          "It's been thirty minutes. \nThe metrocar is still stuck. There's been one announcement, saying that things will be cleared up and moving soon. \nYou hope. It is 1:30 pm.",
         choices: [
-          { text: "exit", nextScene: "metroMoving"}
+          { text: "exit", nextScene: "metroMoving" }
         ],
       },
       metroMoving: {
-        description: 
-        "A further twenty minutes later, with no updates over the intercom, you think you have no chance.\nSuddenly, a jolt, and you're moving again.",
+        description:
+          "A further twenty minutes later, with no updates over the intercom, you think you have no chance.\nSuddenly, a jolt, and you're moving again.",
         choices: [
-          { text:"exit", nextScene: "lastBus"}
+          { text: "exit", nextScene: "lastBus" }
         ],
       },
       lastBus: {
-        description: 
-        "You're almost there.\nBut time is rushing by. If you hurry, the bus should get you there. Hurry!", 
+        description:
+          "You're almost there.\nBut time is rushing by. If you hurry, the bus should get you there. Hurry!",
         choices: [
-          { text: "enter", nextScene: "demoDay3"}
+          { text: "enter", nextScene: "demoDay3" }
         ],
       },
       demoDay1: {
@@ -332,7 +335,7 @@ function TerminalGame() {
         description: "\n-Congratulations! It is now 2:59 pm, but you made it to Brainstation's Demo Day. Your nerves may be shaky from the Uber-ing, but you made it!",
         choices: [],
       },
-      demoDay3:{
+      demoDay3: {
         description: "\n-Congratulations! You made it, a few minutes, give or take. But you made it to Brainstation's Demo Day. Drink some water, stretch, and check out all the cool projects!",
         choices: [],
       },
