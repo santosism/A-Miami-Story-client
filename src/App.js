@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import TerminalGame from './components/TerminalGame/TerminalGame';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+// import FormAuth from "./components/FormAuth/FormAuth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBUULCn0ex2z_cLSbMXqtIGx6GB36aFQNo",
@@ -34,6 +35,7 @@ function App() {
   return (
     <div className="App">
       <h1>A Miami Story</h1>
+      {/* <FormAuth /> */}
       <TerminalGame users={users} />
     </div>
   );
