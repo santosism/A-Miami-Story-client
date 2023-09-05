@@ -28,6 +28,13 @@ function TerminalGame() {
   const [currentMusic, setCurrentMusic] = useState(backgroundMusic1);
   const [isMuted, setIsMuted] = useState(true);
 
+ 
+ 
+  
+  
+  
+  
+
   useEffect(() => {
     //useEffect handles the bulk of rendering and changing scenes and music
     const terminal = $(terminalRef.current);
