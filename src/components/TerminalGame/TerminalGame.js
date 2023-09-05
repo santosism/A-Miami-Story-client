@@ -46,13 +46,11 @@ function TerminalGame() {
     axios
       .get('http://localhost:5050/scenes')
       .then((response) => {
-        console.log('Scenes data:', response.data);
         const scenes = response.data.scenes;
 
         axios
           .get('http://localhost:5050/transitions')
           .then((response) => {
-            console.log('Transitions data:', response.data);
             const transitions = response.data.transitions;
 
             let currentScene = 'start';
