@@ -103,7 +103,7 @@ function TerminalGame() {
 
   const getImageForScene = (scene) => {
     switch (scene) {
-      case 'move':
+      case 'inAHurry':
         return image2;
       case 'stillVibin':
         return image3;
