@@ -11,6 +11,9 @@ import image3 from '../../assets/images/image3.jpg';
 import image4 from '../../assets/images/image4.jpg';
 import titleImage from "../../assets/images/AMiamiStory.jpg";
 import switchImage from "../../assets/images/Miami.svg";
+import shena from "../../assets/images/shenaregal.jpg";
+import cats from "../../assets/images/cats.jpg";
+import coffee from "../../assets/images/coffee.jpg";
 
 import backgroundMusic1 from '../../assets/music/8bitnostalgia.mp3';
 import backgroundMusic2 from '../../assets/music/8bitfunk.mp3';
@@ -103,10 +106,16 @@ function TerminalGame() {
 
   const getImageForScene = (scene) => {
     switch (scene) {
+      case "help":
+        return coffee; 
       case 'inAHurry':
         return image2;
       case 'stillVibin':
         return image3;
+      case "vibin": 
+      return shena; 
+      case "worry":
+        return cats;
       case 'end1':
         return image4;
       case 'end4':
