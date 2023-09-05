@@ -72,6 +72,9 @@ function TerminalGame() {
                     currentScene = nextScene;
                     terminal.echo(`You chose: ${matchedChoice.text}`);
                     terminal.echo(scenes[nextScene].description);
+                    terminal.echo(''); 
+                    terminal.echo('-------------------'); 
+            
 
                     setCurrentImage(getImageForScene(nextScene));
                     setCurrentMusic(getMusicForScene(nextScene));
@@ -98,7 +101,7 @@ function TerminalGame() {
                 }
               }
             }, {
-              greetings: scenes.start.description,
+              greetings: scenes.start.description + '\n\n-------------------',
               prompt: '> ',
             });
           })
