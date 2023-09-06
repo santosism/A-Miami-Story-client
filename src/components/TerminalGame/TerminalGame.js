@@ -44,12 +44,12 @@ function TerminalGame() {
     };
 
     axios
-      .get('http://localhost:5050/scenes')
+      .get('https://a-miami-story-server-269397fbf5fb.herokuapp.com/scenes')
       .then((response) => {
         const scenes = response.data.scenes;
 
         axios
-          .get('http://localhost:5050/transitions')
+          .get('https://a-miami-story-server-269397fbf5fb.herokuapp.com/transitions')
           .then((response) => {
             const transitions = response.data.transitions;
 
