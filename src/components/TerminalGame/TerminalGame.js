@@ -138,13 +138,13 @@ function TerminalGame() {
   const getMusicForScene = (scene) => {
     switch (scene) {
       case "observe":
-        return backgroundMusic4;
+        return backgroundMusic1;
       case "stillVibin":
         return backgroundMusic3;
       case 'inAHurry':
         return backgroundMusic2;
       default:
-        return backgroundMusic1;
+        return backgroundMusic4;
     }
   };
 

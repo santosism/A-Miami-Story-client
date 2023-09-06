@@ -83,6 +83,7 @@
   .terminal.external [data-text] {
     color: var(--font-color, $nes-text-color);
     overflow: hidden;
+    font-size: 14px; 
   }
 
  
