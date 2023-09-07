@@ -173,7 +173,7 @@ function TerminalGame() {
           <img src={currentImage} className="terminal__image" alt="Scene" />
         </div>
         <div ref={terminalRef}></div>
-        <div>
+        <div classNsme="list">
           <ul className="commands">Commands:
             <li>move</li>
             <li>look</li>
