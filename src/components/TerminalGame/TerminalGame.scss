@@ -101,4 +101,8 @@
   @include desktop{
     width: 25%; 
   }
+
+  &__heading{
+    border-bottom: 2px solid black; 
+  }
 }

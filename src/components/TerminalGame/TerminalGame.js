@@ -180,6 +180,7 @@ function TerminalGame() {
             <li>wait</li>
             <li>panic</li>
             <li>help</li>
+            <li>back</li>
             <li>clear/restart</li>
           </ul>
         </div>
