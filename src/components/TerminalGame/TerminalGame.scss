@@ -83,8 +83,21 @@
   .terminal.external [data-text] {
     color: var(--font-color, $nes-text-color);
     overflow: hidden;
-    font-size: 14px; 
+    font-size: 0.875rem; 
   }
 
  
+}
+
+.commands{
+  border: 2px solid black; 
+  text-align: center; 
+  background-color: $art-deco-accent-color;
+  @include tablet{
+    width: 50%; 
+  }
+
+  @include desktop{
+    width: 25%; 
+  }
 }

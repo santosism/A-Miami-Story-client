@@ -173,6 +173,16 @@ function TerminalGame() {
           <img src={currentImage} className="terminal__image" alt="Scene" />
         </div>
         <div ref={terminalRef}></div>
+        <div>
+          <ul className="commands">Commands:
+            <li>move</li>
+            <li>look</li>
+            <li>wait</li>
+            <li>panic</li>
+            <li>help</li>
+            <li>clear/restart</li>
+          </ul>
+        </div>
         <button className="unmute" onClick={toggleMute}>{isMuted ? 'Unmute' : 'Mute'}</button>
         <audio ref={audioRef} autoPlay loop muted={isMuted}>
           <source src={currentMusic} type="audio/mp3" />
